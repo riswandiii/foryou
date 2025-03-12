@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love 💖</title>
+    <style>
+        /* Global Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f8cdd1, #fce8f1);
+            color: #462d3d;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #ff66b2;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #ff4081;
+            font-weight: 300;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Heart Animation */
+        .heart {
+            font-size: 5em;
+            color: #ff4081;
+            animation: heartBeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartBeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+
+        /* Content Section */
+        .content {
+            font-size: 1.2em;
+            color: #662c35;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 20px;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #ff66b2;
+            color: white;
+            padding: 12px 40px;
+            border-radius: 30px;
+            font-size: 1.3em;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            margin-top: 30px;
+        }
+
+        .button:hover {
+            background-color: #ff4081;
+            transform: scale(1.1);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer Styling */
+        footer {
+            margin-top: 50px;
+            background-color: #ff66b2;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-text {
+            font-size: 1.2em;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Cloud Animation */
+        .clouds {
+            position: absolute;
+            top: 10%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            animation: moveClouds 50s linear infinite;
+        }
+
+        @keyframes moveClouds {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Cloud Movement Keyframe */
+        .cloud {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+
+        .cloud1 {
+            width: 200px;
+            height: 100px;
+            top: 50px;
+            left: -150px;
+            animation: cloudMove 30s ease-in-out infinite;
+        }
+
+        .cloud2 {
+            width: 250px;
+            height: 120px;
+            top: 150px;
+            left: -200px;
+            animation: cloudMove 45s ease-in-out infinite;
+        }
+
+        .cloud3 {
+            width: 300px;
+            height: 150px;
+            top: 250px;
+            left: -300px;
+            animation: cloudMove 60s ease-in-out infinite;
+        }
+
+        /* Cloud Movement Keyframe */
+        @keyframes cloudMove {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Surprise Animation (Love Hearts) */
+        .surprise-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+
+        .love-heart {
+            position: absolute;
+            font-size: 10em;
+            color: #ff4081;
+            animation: loveAnimation 3s ease-in-out infinite;
+        }
+
+        @keyframes loveAnimation {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            25% {
+                transform: scale(1.5);
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(2);
+                opacity: 0.6;
+            }
+            75% {
+                transform: scale(1.5);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .content {
+                font-size: 1.1em;
+                margin: 0 10px;
+            }
+
+            .button {
+                padding: 10px 30px;
+                font-size: 1.1em;
+            }
+
+            .heart {
+                font-size: 4em;
+            }
+
+            .cloud1, .cloud2, .cloud3 {
+                width: 150px;
+                height: 75px;
+            }
+
+            footer {
+                padding: 15px 0;
+            }
+
+            .footer-text {
+                font-size: 1em;
+            }
+
+            .love-heart {
+                font-size: 6em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            .content {
+                font-size: 1em;
+            }
+
+            .button {
+                padding: 8px 20px;
+                font-size: 1em;
+            }
+
+            .heart {
+                font-size: 3.5em;
+            }
+
+            .love-heart {
+                font-size: 5em;
+            }
+
+            .cloud1, .cloud2, .cloud3 {
+                width: 120px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>For My Love St. Nur Indasari💖</h1>
+        <h2>You light up my world!</h2>
+    </header>
+
+    <div class="content">
+        <p>My Dearest,</p>
+        <p>I just wanted to take a moment to tell you how much you mean to me. Every day spent with you is a beautiful day, filled with laughter, joy, and endless love. 🌹</p>
+        <p class="heart">💖</p>
+        <p>You are my sunshine, the reason my heart races and my smile never fades. Every moment with you feels like a dream come true. 🌟</p>
+        <p>I am so grateful to have you by my side. ❤️</p>
+        <a href="#" class="button" onclick="showSurprise()">Click here for a surprise, my love! 🎁</a><br><br><br><br><br><br>
+    </div>
+
+    <div class="clouds">
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+    </div>
+
+    <div class="surprise-container" id="surpriseContainer">
+        <!-- Multiple Love Hearts -->
+        <div class="love-heart" style="animation-delay: 0s;">💖</div>
+        <div class="love-heart" style="animation-delay: 1s;">💖</div>
+        <div class="love-heart" style="animation-delay: 2s;">💖</div>
+        <div class="love-heart" style="animation-delay: 3s;">💖</div>
+        <div class="love-heart" style="animation-delay: 4s;">💖</div>
+
+        <!-- Replace flowers with love hearts -->
+        <div class="love-heart" style="top: 10%; left: 30%; animation-delay: 5s;">💖</div>
+        <div class="love-heart" style="top: 20%; left: 70%; animation-delay: 5s;">💖</div>
+        <div class="love-heart" style="top: 30%; left: 10%; animation-delay: 5s;">💖</div>
+        <div class="love-heart" style="top: 60%; left: 50%; animation-delay: 5s;">💖</div>
+        <div class="love-heart" style="top: 80%; left: 80%; animation-delay: 5s;">💖</div>
+    </div>
+
+    <footer>
+        <p class="footer-text">With all my heart, [riswandi] 💕</p>
+    </footer>
+
+    <script>
+        function showSurprise() {
+            document.getElementById('surpriseContainer').style.display = 'flex';
+            setTimeout(function() {
+                document.getElementById('surpriseContainer').style.display = 'none';
+            }, 7000); // Hide surprise after 7 seconds
+        }
+    </script>
+
+</body>
+</html>
