@@ -13,12 +13,14 @@
             background: linear-gradient(135deg, #f8cdd1, #fce8f1);
             color: #462d3d;
             text-align: center;
-            height: 100vh;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             overflow: hidden;
+            min-height: 100vh;
+            position: relative;
         }
 
         h1 {
@@ -56,6 +58,7 @@
             line-height: 1.6;
             max-width: 800px;
             margin: 0 20px;
+            padding-bottom: 80px; /* Add padding to prevent button overlap */
         }
 
         .content p {
@@ -83,12 +86,11 @@
 
         /* Footer Styling */
         footer {
-            margin-top: 50px;
             background-color: #ff66b2;
             padding: 20px 0;
-            position: absolute;
-            bottom: 0;
             width: 100%;
+            position: relative;
+            margin-top: auto; /* Push footer to the bottom */
         }
 
         .footer-text {
@@ -307,7 +309,6 @@
         <div class="love-heart" style="top: 80%; left: 80%; animation-delay: 5s;">💖</div>
     </div>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br>
     <footer>
         <p class="footer-text">With all my heart, [riswandi] 💕</p>
     </footer>
